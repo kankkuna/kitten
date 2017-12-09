@@ -7,20 +7,20 @@
 .container{
   max-width: 1200px;
   height: 100%;
-  margin: 0;
+  
 
 }
 
-.one {
+#one {
   position: absolute;
-  width: 1600px;
-  height: 765px;
+  /*width: 1600px;
+  height: 765px;*/
 }
 
-.two {
+#two {
   position: relative;
-  margin-left: 520px;
-  margin-top: 340px;
+  /*margin-left: 520px;
+  margin-top: 340px;*/
 }
 
 .row::before, .row::after{
@@ -47,8 +47,52 @@
 .col-9 {width: 75%;}
 .col-12 {width: 100%;}
 
- @@media all and (max-width: 450px) {
+ /*@media all and (max-width: 450px) {
    [class*="col-"]{
      width: 100%;
+     display: block;
+   }*/
+
+ @media screen and (min-width:1201px) and (min-height:801px) and (max-width:1600px) and (max-height:860px) {
+   .kit-day .a{
+     display: block;
+     margin-top: 0;
+   }
+   .kit-afternoon .b{
+     display: none;
+     margin-top: 0;
+   }
+   .kit-night .c{
+     display: none;
+     margin-top: 0;
+   }
+ }
+
+ @media screen and (min-width:800px) and (min-height:500px) and (max-width:1200px) and (max-height:800px) {
+   .kit-day .a{
+     display: none;
+     margin-top: 0;
+   }
+   .kit-afternoon .b{
+     display: none;
+     margin-top: 0;
+   }
+   .kit-night .c{
+     display: block;
+     margin-top: 0;
+   }
+ }
+ @media screen and (max-width:799px, max-height:499px) {
+   .kit-day .a{
+     display: none;
+     margin-top: 0;
+   }
+   .kit-afternoon .b{
+     display: block;
+     margin-top: 0;
+   }
+   .kit-night .c{
+     display: none;
+     margin-top: 0;
    }
  }
